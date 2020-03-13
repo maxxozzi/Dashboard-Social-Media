@@ -1,24 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Navbar, NavbarBrand } from 'reactstrap';
+import Logo from './img/logo.png';
+import DashboardBody from './components/DashboardBody';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar color="faded" light expand="lg" style={{borderBottom : "1px solid #ededed", marginBottom: 20}}>
+        <NavbarBrand href="/" style={{fontWeight: 'bold'}}>
+          <img src={Logo} alt="Logo" style={{height: 35}} />Dashboard Social Media
+        </NavbarBrand>
+      </Navbar>
+      <DashboardBody />
     </div>
   );
 }
