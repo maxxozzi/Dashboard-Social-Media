@@ -22,6 +22,7 @@ function Post() {
     const [emailComment, setEmailComment] = useState('');
     const [bodyComment, setBodyComment] = useState('');
     const [activeTab, setActiveTab] = useState('1');
+    const [deleteItem, setDeleteItem] = useState(false);
     const [modalAddPost, setModalAddPost] = useState(false);
     const [modalViewPost, setModalViewPost] = useState(false);
 
@@ -155,6 +156,7 @@ function Post() {
                 let posts = list;
                 posts.splice(index, 1);
                 dispatch(setPostList(posts));
+                setDeleteItem(!deleteItem);
                 Swal.fire({
                     type: 'success',
                     title: 'Comment deleted'
@@ -220,6 +222,7 @@ function Post() {
                 let comments = listComment;
                 comments.splice(index, 1);
                 setListComment(comments);
+                setDeleteItem(!deleteItem);
                 Swal.fire({
                     type: 'success',
                     title: 'Comment deleted'
