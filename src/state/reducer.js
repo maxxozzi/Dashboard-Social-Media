@@ -1,4 +1,4 @@
-const initialState = {
+export const initialState = {
     viewList: 'User',
     postList: [],
     albumList: [],
@@ -6,7 +6,7 @@ const initialState = {
     name: ''
 };
 
-export default (state = initialState, action) => {
+export function reducer(state = initialState, action) {
     switch(action.type) {
         case 'SET_VIEW_LIST':
         return {

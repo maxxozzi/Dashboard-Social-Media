@@ -6,7 +6,7 @@ import './style/font-awesome/css/all.min.css';
 import App from './App';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import rootReducer from './state/reducer';
+import { reducer } from './state/reducer';
 import { persistStore, persistReducer } from 'redux-persist';
 import { PersistGate } from 'redux-persist/integration/react';
 import storage from 'redux-persist/lib/storage';
@@ -16,7 +16,7 @@ const persistConfig = {
     key: 'root',
     storage,
   }
-const persistedReducer = persistReducer(persistConfig, rootReducer)
+const persistedReducer = persistReducer(persistConfig, reducer)
 let store = createStore(persistedReducer)
 let persistor = persistStore(store)
 

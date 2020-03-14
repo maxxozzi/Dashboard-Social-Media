@@ -6,7 +6,7 @@ Single page application to see list of user, their posts, comments and photo alb
 
 You can visit here to see the deployed version:
 
-[Dasboard Social Media](http://180.250.242.163/dashboard-social-media/)
+[Dashboard Social Media](http://180.250.242.163/dashboard-social-media/)
 
 ## Start Application
 
